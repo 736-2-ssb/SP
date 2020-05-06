@@ -1,4 +1,5 @@
 FROM centos
-RUN yum update -y && yum upgrade -y 
-RUN yum install -y gcc gdb binutils
-COPY transp.c .
+RUN yum update -y && yum upgrade -y
+RUN groupunstall "Development Tools" -y
+COPY parent.cpp .
+COPY children.cpp .
