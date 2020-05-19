@@ -1,5 +1,4 @@
 FROM centos
-RUN yum update -y && yum upgrade -y
-RUN groupunstall "Development Tools" -y
-COPY parent.cpp .
-COPY children.cpp .
+RUN yum update -y && yum upgrade -y 
+RUN yum groupinstall 'Development Tools' -y
+COPY lab5_6.cpp .
